@@ -1,11 +1,15 @@
 let homeScore = 0;
 let guestScore = 0;
+let homeScoreEl = document.getElementById('home-score')
+let guestScoreEl = document.getElementById('guest-score')
 
 const newGame = () => {
     homeScore = 0
     guestScore = 0
-    document.getElementById('home-score').textContent = "0"
-    document.getElementById('guest-score').textContent = "0"
+    homeScoreEl.textContent = "0"
+    guestScoreEl.textContent = "0"
+    homeScoreEl.classList.remove('leader')
+    guestScoreEl.classList.remove('leader')
 }
 
 const leader = () => {
